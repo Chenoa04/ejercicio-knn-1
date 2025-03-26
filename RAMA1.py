@@ -14,14 +14,14 @@ A_entrenamiento = df[['Caracteristica1', 'Caracteristica2']].values
 B_entrenamiento = df['Clase'].values
 
 
-clasificador_knn = KNeighborsClassifier(n_neighbors=3, metric='manhattan')
+clasificador = KNeighborsClassifier(n_neighbors=3, metric='manhattan')
 
 
-clasificador_knn.fit(A_entrenamiento, B_entrenamiento)
+clasificador.fit(A_entrenamiento, B_entrenamiento)
 
 caso_a_clasificar = np.array([[2.5, 2.5]])
 
 
-clase_predicha = clasificador_knn.predict(caso_a_clasificar)
+clase_predicha = clasificador.predict(caso_a_clasificar)
 
 print(f"La clase predicha para el caso (2.5, 2.5) es: {clase_predicha[0]}")
